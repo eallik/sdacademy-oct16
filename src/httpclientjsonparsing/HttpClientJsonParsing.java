@@ -32,7 +32,7 @@ public class HttpClientJsonParsing {
             System.out.println("temp:     " + root.getMain().getTemp() + " K");
             System.out.println("pressure: " + root.getMain().getPressure() + " mbar");
         }
-        catch (final FileNotFoundException e) { System.err.println("No such city: " + city); }  // 404 not found
+        catch (final FileNotFoundException e) { e.printStackTrace(); System.err.println("No such city: " + city); }  // 404 not found
         catch (final IOException           e) { e.printStackTrace(); }
 
         System.out.print("\ncontinue? [y/n] ");
